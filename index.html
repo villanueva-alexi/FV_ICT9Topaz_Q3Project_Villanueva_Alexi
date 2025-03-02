@@ -36,16 +36,23 @@ src: url(rbh.otf);
 font-family: rbho;
 src: url(rbho.otf);
 }
+
+.search{
+font-family: rbh;
+}
         
 </style>
 </head>
 
 <body>
 
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+	<nav class="navbar navbar-expand-md custom fixed-top" style="background-color: #f6dd8d; ">
+
 
 	<div class="container-fluid">	
-		<a class="navbar-brand" href="index.html"><span style="font-size: 26px;">☻</span></a>
+		<a class="navbar-brand" href="index.html">
+			<img src="deernavbar.png" alt="logo" style="height: 40px; width: 50px;">
+		</a>
 
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav me-auto">
@@ -68,7 +75,9 @@ src: url(rbho.otf);
 
 			<form class="d-flex">
 				<input class="form-control search" type="text" placeholder="Search...">
-				<button class="btn btn-light" type="button"><span style="font-family: IBM Plex Mono, monospace; font-weight: 400;">Search</span></button>
+				<button class="btn search-btn" type="submit">
+					<img src="search.png" alt="search" style="height: 30px; width: 30px;">
+				</button>
 			</form>
 		</div>	
 	</div>
