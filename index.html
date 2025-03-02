@@ -52,6 +52,12 @@ color: #261f18;
 .search{
 font-family: rbh;
 }
+
+.fare{
+padding-top: 30px;
+}
+
+
         
 </style>
 </head>
@@ -91,6 +97,91 @@ font-family: rbh;
 		</div>	
 	</div>
 </nav>
+
+<div class="fare col-md-4">
+		<form>
+		<label>LEAVING FROM</label>
+		<br>
+			<select class="form-select" id="from">
+				<option value="none">Choose</option>
+				<option value="0">North Ave.</option>
+				<option value="13">Quezon Ave.</option>
+				<option value="13">GMA Kamunting</option>
+				<option value="16">Araneta Cubao</option>
+				<option value="16">Santolan Annapolis</option>
+				<option value="20">Ortigas</option>
+				<option value="20">Shaw Blvd.</option>
+				<option value="20">Boni</option>
+				<option value="24">Guadalupe</option>
+				<option value="24">Buendia</option>
+				<option value="24">Ayala</option>
+				<option value="28">Magallanes</option>
+				<option value="28">Taft</option>
+			</select>
+		<br><br>
+
+		<label>GOING TO</label>
+		<br>
+			<select class="form-select" id="to">
+				<option value="none">Choose</option>
+				<option value="0">North Ave.</option>
+				<option value="13">Quezon Ave.</option>
+				<option value="13">GMA Kamunting</option>
+				<option value="16">Araneta Cubao</option>
+				<option value="16">Santolan Annapolis</option>
+				<option value="20">Ortigas</option>
+				<option value="20">Shaw Blvd.</option>
+				<option value="20">Boni</option>
+				<option value="24">Guadalupe</option>
+				<option value="24">Buendia</option>
+				<option value="24">Ayala</option>
+				<option value="28">Magallanes</option>
+				<option value="28">Taft</option>
+				
+
+			</select>
+		<br><br>
+
+		<label>DISCOUNTS</label>
+		<br>
+			<select class="form-select" id="dsct">
+				<option value="0">N/A</option>
+				<option value="0.2">Student</option>
+				<option value="0.2">Senior Citizen</option>
+				<option value="0.2">PWD</option>
+			</select>
+		<br><br>
+
+		<button type="submit" class="btn btn-success" onclick="showReg()"> Show </button>
+		<button type="submit" class="btn btn-success" onclick="showDsct()"> Discount </button>
+	</form>
+
+	<script>
+
+		function showReg(){
+			var from = document.getElementById("from").value;
+			var to = document.getElementById("to").value;
+			var dsct = document.getElementById("dsct").value;
+			var bFare = 13;
+			var ans = Math.abs(Number(to) - Number(from));
+			window.alert("The price of your ticket is " + ans + ".");
+		}
+
+		function showDsct(){
+			var from = document.getElementById("from").value;
+			var to = document.getElementById("to").value;
+			var dsct = document.getElementById("dsct").value;
+			var ans = Math.abs(Number(to) - Number(from));
+			var discountAmt = ans * Number(dsct);
+			var finalPrice = ans - discountAmt;
+			var disc = finalPrice.toFixed(2);
+			window.alert("The price of your ticket is " + disc + ".");
+		}
+
+	</script>
+
+		
+	</div>
 
 
     
