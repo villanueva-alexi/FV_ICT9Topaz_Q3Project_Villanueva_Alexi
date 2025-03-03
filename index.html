@@ -178,7 +178,7 @@ align-items: center;
 			var dsct = document.getElementById("dsct").value;
 			var bFare = 13;
 			var ans = Math.abs(Number(to) - Number(from)) + bFare;
-			window.alert("The price of your ticket is " + ans + ".");
+			window.alert("The price of your ticket is " + "₱"  + ans + ".");
 		}
 
 		function showDsct(){
@@ -191,7 +191,7 @@ align-items: center;
 			var Price = ans - discountAmt;
 			var finalPrice = Price + bFare;
 			var disc = finalPrice.toFixed(2);
-			window.alert("The price of your ticket is " + disc + ".");
+			window.alert("The price of your ticket is " + "₱"  + disc + ".");
 		}
 
 
