@@ -58,6 +58,17 @@ padding-top: 30px;
 padding-left: 20px;
 }
 
+.image-grid{
+width: 100%;
+padding: 60px;
+}
+
+.image-item{
+flex: 1;
+text-align: center;
+}
+
+
 
 
         
@@ -182,33 +193,37 @@ padding-left: 20px;
 
 	</script>
 	</div>
+	
 
-	<div class="container2">
-		<div class="1p">
-			<a href="singleJ.png" target="_blank">
-				<img src="singleJ.png" alt="singlejourney" style="height: 40px; width: 50px;">
-			</a>
+	<div class="image-grid">
+		<div class="image-container">
+					<div class="image-item">
+						<a href="singleJ.png" target="_blank">
+							<img src="singleJ.png" alt="sj" height="220" width="200" class="sj">
+						</a>
+						<p>
+							<span style="color: #2d3b33">Single Journey Ticket</span><br><span style="color: #919c96;">₱13.00-₱28.00</span>
+						</p>
+						<details ontoggle="message()">
+							<summary>Information</summary>
+								<i>Single ride ticket which is only available on date of purchase.</i>
+						</details>
+					</div>
+
+					<div class="image-item">
+						<a href="singleJd.png" target="_blank">
+							<img src="singleJd.png" alt="sjd" height="220" width="200" class="sjd">
+						</a>
+						<p>
+							<span style="color: #2d3b33">Single Journey Discount Ticket</span><br><span style="color: #919c96;">₱13.00-₱28.00</span>
+						</p>
+						<details ontoggle="message()">
+							<summary>Information</summary>
+								<i>Single ride discounted ticket (20% discount for Senior Citizens, PWD, Students) which is only available on date of purchase.</i>
+						</details>
+					</div>
+			</div>
 		</div>
-
-		<div class="2p">
-			<a href="singleJd.png" target="_blank">
-				<img src="singleJd.png" alt="singlejourneydiscount" style="height: 40px; width: 50px;">
-			</a>
-		</div>
-
-		<div class="3p">
-			<a href="stored.png" target="_blank">
-				<img src="stored.png" alt="storedvalue" style="height: 40px; width: 50px;">
-			</a>
-		</div>
-
-		<div class="4p">
-			<a href="storedD.png" target="_blank">
-				<img src="storedD.png" alt="storedvaluediscount" style="height: 40px; width: 50px;">
-			</a>
-		</div>
-	</div>
-
 
     
 </body>
