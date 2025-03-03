@@ -42,11 +42,14 @@ color: #261f18;
 .search{
 font-family: rbh;
 }
+
 h1{
 font-family: rbh
+background-color: #53b4e6;
 }
+
 input{
-	border: #261f18 3px solid;
-	border-radius: 10px;
+border: #261f18 3px solid;
+border-radius: 10px;
 }  
 
