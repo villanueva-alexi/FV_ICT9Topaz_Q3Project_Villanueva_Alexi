@@ -45,3 +45,8 @@ font-family: rbh;
 h1{
 font-family: rbh
 }
+input{
+	border: #261f18 3px solid;
+	border-radius: 10px;
+}  
+
