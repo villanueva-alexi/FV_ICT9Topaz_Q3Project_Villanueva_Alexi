@@ -121,18 +121,18 @@ align-items: center;
 			<select class="form-select" id="from">
 				<option value="none">Choose</option>
 				<option value="0">North Ave.</option>
-				<option value="13">Quezon Ave.</option>
-				<option value="13">GMA Kamunting</option>
-				<option value="16">Araneta Cubao</option>
-				<option value="16">Santolan Annapolis</option>
-				<option value="20">Ortigas</option>
-				<option value="20">Shaw Blvd.</option>
-				<option value="20">Boni</option>
-				<option value="24">Guadalupe</option>
-				<option value="24">Buendia</option>
-				<option value="24">Ayala</option>
-				<option value="28">Magallanes</option>
-				<option value="28">Taft</option>
+				<option value="0">Quezon Ave.</option>
+				<option value="0">GMA Kamunting</option>
+				<option value="3">Araneta Cubao</option>
+				<option value="3">Santolan Annapolis</option>
+				<option value="7">Ortigas</option>
+				<option value="7">Shaw Blvd.</option>
+				<option value="7">Boni</option>
+				<option value="11">Guadalupe</option>
+				<option value="11">Buendia</option>
+				<option value="11">Ayala</option>
+				<option value="15">Magallanes</option>
+				<option value="15">Taft</option>
 			</select>
 		<br><br>
 
@@ -141,20 +141,18 @@ align-items: center;
 			<select class="form-select" id="to">
 				<option value="none">Choose</option>
 				<option value="0">North Ave.</option>
-				<option value="13">Quezon Ave.</option>
-				<option value="13">GMA Kamunting</option>
-				<option value="16">Araneta Cubao</option>
-				<option value="16">Santolan Annapolis</option>
-				<option value="20">Ortigas</option>
-				<option value="20">Shaw Blvd.</option>
-				<option value="20">Boni</option>
-				<option value="24">Guadalupe</option>
-				<option value="24">Buendia</option>
-				<option value="24">Ayala</option>
-				<option value="28">Magallanes</option>
-				<option value="28">Taft</option>
-				
-
+				<option value="0">Quezon Ave.</option>
+				<option value="0">GMA Kamunting</option>
+				<option value="3">Araneta Cubao</option>
+				<option value="3">Santolan Annapolis</option>
+				<option value="7">Ortigas</option>
+				<option value="7">Shaw Blvd.</option>
+				<option value="7">Boni</option>
+				<option value="11">Guadalupe</option>
+				<option value="11">Buendia</option>
+				<option value="11">Ayala</option>
+				<option value="15">Magallanes</option>
+				<option value="15">Taft</option>
 			</select>
 		<br><br>
 
@@ -162,14 +160,14 @@ align-items: center;
 		<br>
 			<select class="form-select" id="dsct">
 				<option value="0">N/A</option>
-				<option value="0.2">Student</option>
-				<option value="0.2">Senior Citizen</option>
-				<option value="0.2">PWD</option>
+				<option value="0.8">Student</option>
+				<option value="0.8">Senior Citizen</option>
+				<option value="0.8">PWD</option>
 			</select>
 		<br><br>
 
-		<button type="submit" class="btn btn-light" onclick="showReg()"> Show </button>
-		<button type="submit" class="btn btn-light" onclick="showDsct()"> Discount </button>
+		<button type="button" class="btn btn-success" onclick="showReg()"> Show </button>
+		<button type="button" class="btn btn-success" onclick="showDsct()"> Discount </button>
 	</form>
 
 	<script>
@@ -179,24 +177,26 @@ align-items: center;
 			var to = document.getElementById("to").value;
 			var dsct = document.getElementById("dsct").value;
 			var bFare = 13;
-			var ans = Math.abs(Number(to) - Number(from));
+			var ans = Math.abs(Number(to) - Number(from)) + bFare;
 			window.alert("The price of your ticket is " + ans + ".");
 		}
 
 		function showDsct(){
+			var bFare = 13;
 			var from = document.getElementById("from").value;
 			var to = document.getElementById("to").value;
 			var dsct = document.getElementById("dsct").value;
 			var ans = Math.abs(Number(to) - Number(from));
 			var discountAmt = ans * Number(dsct);
-			var finalPrice = ans - discountAmt;
+			var Price = ans - discountAmt;
+			var finalPrice = Price + bFare;
 			var disc = finalPrice.toFixed(2);
 			window.alert("The price of your ticket is " + disc + ".");
 		}
 
+
 	</script>
 	</div>
-	
 
 	<div class="image-grid">
 		<div class="image-container">
